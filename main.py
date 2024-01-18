@@ -84,7 +84,7 @@ model.add(Bidirectional(LSTM(240, input_shape=(window_length, number_of_features
 model.add(Bidirectional(LSTM(240, input_shape=(window_length, number_of_features),
                              return_sequences=True)))
 model.add(Dropout(0.2))
-#model.add(Flatten())
+model.add(Flatten())
 model.add(Dense(42))
 model.add(Dense(number_of_features))
 
